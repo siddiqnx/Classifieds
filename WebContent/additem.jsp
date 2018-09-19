@@ -14,9 +14,9 @@
 	<%
 		if(session.getAttribute("userEmail") == null) {
 			response.sendRedirect("login.jsp");
+		} else {
+			String userEmail = session.getAttribute("userEmail").toString();
 		}
-	
-		String userEmail = session.getAttribute("userEmail").toString();
 	%>
 	<header id='top'>
 		<jsp:include page='header.jsp'/>
