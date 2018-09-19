@@ -39,7 +39,7 @@ public class AddItemController extends HttpServlet {
 			ps.setString(2, request.getParameter("item_title"));
 			ps.setString(3, request.getParameter("item_short_description"));
 			ps.setString(4, request.getParameter("item_long_description"));
-			ps.setString(5, "Ron");
+			ps.setString(5, request.getParameter("poster_email"));
 			ps.setFloat(6, Float.parseFloat(request.getParameter("item_price")));
 			ps.setString(7, request.getParameter("poster_address"));
 			ps.setLong(8, Long.parseLong(request.getParameter("poster_contact")));

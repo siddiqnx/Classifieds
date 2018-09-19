@@ -15,11 +15,12 @@
 		if(session.getAttribute("userEmail") == null) {
 			response.sendRedirect("login.jsp");
 		}
+	
+		String userEmail = session.getAttribute("userEmail").toString();
 	%>
 	<header id='top'>
 		<jsp:include page='header.jsp'/>
 	</header>
-	
 	<form action='AddItemController' method='GET' class='shadow_rounded' >
 		<label for='title'>Title</label>
 		<input type='text' id='title' name="item_title"/>
@@ -30,6 +31,8 @@
 			<option value='Land'>Land</option>
 			<option value='Electronics'>Electonics</option>
 		</select>
+		
+		<input type='hidden' value='${userEmail}' name='poster_email'>
 		
 		<label for='short_description'>Short Description</label>
 		<input type='text' id='short_description' name='item_short_description' value=''/>
