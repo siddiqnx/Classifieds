@@ -1,0 +1,74 @@
+#content_item {
+	width: 100%;
+	height: 110px;
+	padding: 10px 10px;
+	background-color: white;
+/* 	border-left: 5px solid teal; */
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	transition: all 0.5s ease-in-out;
+	margin-bottom: 20px;
+}
+
+#content_item > span {
+	float: right;
+}
+
+#content_item > #title > h3 {
+	display: flex;
+	align-items: center;
+	font-weight: ligher;
+}
+
+#content_item h3, #content_item h4 {
+	width: 650px;
+	margin: 0;
+}
+
+#title {
+	width: 100%;
+	display: flex;
+}
+
+#expand_button {
+	float: right;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#description {
+	
+}
+
+#long_description {
+	height: 200px;
+	transition: all 0.5s ease-in-out;
+	padding-top: 20px;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.Land {
+	border-left: 5px solid #9b489b;
+}
+
+.Automobile {
+	border-left: 5px solid #006494;
+}
+
+.Electronics {
+	border-left: 5px solid #c47335;
+}
+
+.Land-color {
+	color: #9b489b;
+}
+
+.Automobile-color {
+	color: #006494;
+}
+
+.Electronics-color{
+	color: #c47335;
+}

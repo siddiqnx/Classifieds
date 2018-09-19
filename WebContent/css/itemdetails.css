@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+#container {
+	width: 700px;
+	margin: 30px auto;
+	padding:20px;
+	position: relative;
+}
+
+#category {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    padding: 6px;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.4);
+    color: white;
+}
+
+.Land-color {
+	background-color: #9b489b;
+}
+
+.Automobile-color {
+	background-color: #006494;
+}
+
+.Electronics-color{
+	background-color: #c47335;
+}

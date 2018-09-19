@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+form {
+	margin: 100px auto;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+form > *:not(label) {
+	margin-bottom: 25px;
+}
+
+form > label {
+	margin-bottom: 10px;
+}
+
+form > input {
+	border: none;
+	border-bottom: 1px solid #00adb5;
+	transition: border 0.1s ease-in-out;
+	line-height: 2em;
+}
+
+
+form > input:focus {
+	border-bottom: 3px solid #00adb5;
+}
+
+input[type=submit] {
+	width: 100px;
+	margin: 0 auto;
+	transition: all 0.6s ease-in-out;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #00adb5;
+	transition: all 0.6s ease-in-out;
+}
+
+h2 {
+	text-align: center;
+}
