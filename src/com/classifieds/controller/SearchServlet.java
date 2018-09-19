@@ -27,11 +27,10 @@ public class SearchServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/home");
 		
 		String searchString = request.getParameter("search_string");
-		String temp = searchString;
 		String url = "jdbc:mysql://localhost:3306/cityclassifieds";
 		String user = "siddiqnx";
 		String password = "password";
-		String query = "select * from items where UPPER(item_title) like \"?\"";
+		String query = "select * from items where UPPER(item_title) like \"%"+searchString.toUpperCase()+"%\"";
 		response.getWriter().println("hello");
 		List<Item> items = new ArrayList<>();
 		response.getWriter().println("hello");
@@ -40,12 +39,11 @@ public class SearchServlet extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(url, user, password);
 			response.getWriter().println("hello");
-			PreparedStatement statement = conn.prepareStatement(query);
+			Statement statement = conn.createStatement();
 			response.getWriter().println("hello");
-			response.getWriter().println("%"+temp	+"%");
-			statement.setString(1, temp);
+			response.getWriter().println("%"+searchString.toUpperCase()+"%");
 			response.getWriter().println("hello");
-			ResultSet resultSet = statement.executeQuery();
+			ResultSet resultSet = statement.executeQuery(query);
 			
 			response.getWriter().println("hello");
 			
@@ -63,12 +61,11 @@ public class SearchServlet extends HttpServlet {
 							)
 						);
 			}
-			response.getWriter().println(items.get(0).getItemTitle());
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 		
-//		request.setAttribute("item_list", items);
-//		dispatcher.forward(request, response);
+		request.setAttribute("item_list", items);
+		dispatcher.forward(request, response);
 	}
 }
