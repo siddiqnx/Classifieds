@@ -42,7 +42,7 @@ public class SearchServlet extends HttpServlet {
 			response.getWriter().println("hello");
 			PreparedStatement statement = conn.prepareStatement(query);
 			response.getWriter().println("hello");
-			response.getWriter().println("%"+temp+"%");
+			response.getWriter().println("%"+temp	+"%");
 			statement.setString(1, temp);
 			response.getWriter().println("hello");
 			ResultSet resultSet = statement.executeQuery();

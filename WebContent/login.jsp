@@ -14,7 +14,7 @@
 	<header>
 		<jsp:include page="header.jsp"/>
 	</header>
-	<form action="LoginController" method="POST" class="shadow_rounded">
+	<form action="LoginController" method="GET" class="shadow_rounded">
 		
 		<label for="user_email">Email</label>
 		<input type="text" id="user_email" name="user_email"/>

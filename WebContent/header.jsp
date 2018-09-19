@@ -11,7 +11,7 @@
 <h1><a href='ClassifiedServlet'>CITY CLASSIFIEDS</a></h1>
 <c:set var = "sess" scope = "session" value = "${userEmail}"/>
 <div id='user-logo'>
-	<div class='logo'> <a href='#'>
+	<div class='logo'> <a href='LoginController'>
 	<c:choose>
 		<c:when test = "${sessionScope.userEmail == null}">
 			<img src='images/user-logo.png'>
